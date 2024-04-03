@@ -1,10 +1,12 @@
 *{
     margin:0;
     padding:0;
+    /* font-size: 1rem; */
+    /* height:100%; */
     box-sizing:border-box;
 }
 body{
-    background: #0f172a;
+    background: #25272c;
     color:white;
     padding:14px;
     min-height: 100vh;
@@ -17,16 +19,31 @@ header{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    gap:14px; 
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.fa-solid-fa-braille{
+    inline-size: 2rem;
+}
+#profileImg{
+    inline-size: 3em;
+    border-radius: 50% 50%;
 }
 main{
     flex:1;
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:first baseline;
+    padding-top: 20px;
 }
 h1{
-    font-size: 4em;
+    font-size: 5em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     justify-content: center;
 }
@@ -34,6 +51,7 @@ nav,section{
     display:flex;
     align-items: center;
     gap:14px;
+    margin:0 5px;
 }
 .greylink{
     color:lightgrey;
@@ -46,6 +64,7 @@ a{
 }
 a:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 button{
     color:green;
@@ -53,10 +72,12 @@ button{
 .searchBar{
     display: flex;
     width:100%;
-    max-width: 800px;
+    height:300%;
+    max-width: 600px;
     margin:20px auto;
     border: 1px solid grey;
     padding:10px;
+    gap:10px;
     border-radius:24px ;
 }
 input{
@@ -66,9 +87,20 @@ input{
     color:white;
     flex:1;
 }
+.searchBarButtons button{
+    height: max-content;
+    background-color:transparent; 
+    border: none;
+    color:white;
+    padding: 0 5px;
+    margin:0;
+}
+.searchBarButtons button i{
+    size: 2em;
+}
 .searchBar:hover{
     border-color: transparent;
-    background: darkgrey;
+    background: #31343a;
 }
 .searchButtonContainer{
     display:flex;
@@ -79,14 +111,17 @@ input{
 .searchButtons{
     padding:10px 14px;
     margin:10px;
-    background-color: grey;
+    background-color: #3f444e83;
     border-radius: 4px;
-
+    border-color: #3f444e;
     color:white;
 }
-/* .searchButtons:hover{} */
+.searchButtons:hover{
+    cursor: pointer;
+}
 .languageSelection{
     font-size: 0.9em;
+    padding-top: 15px;
 }
 .languageSelection span{
     color:cyan;
@@ -102,7 +137,7 @@ footer > section{
 footer > section:last-child{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border-top:1px solid darkgrey;
 }
 .footerLink{
